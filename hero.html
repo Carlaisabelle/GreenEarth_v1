@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assests/css/main.css">
+    <link rel="icon" type="image/x-icon" href="assests/img/favicon.ico">
+    <title>Hero</title>
+</head>
+<body>
+    <nav class="header">
+        <div class="logo">
+            <a href="index.html"><img src="assests/img/GreenEarthHome.png" alt="Logo Green Earth"></a>
+        </div>
+        <div class="menu">
+            <ul class="menu__nav">
+                <li class="menu__item" active><a href="hero.html">Be a Hero</a></li>
+                <li class="menu__item"><a href="about.html">Su di Noi</a></li>
+                <li class="menu__item"><a href="projects.html">I Nostri Progetti</a></li>
+                <li class="menu__item"><a href="contacts.html">Contattaci!</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main class="hero">
+        <br>
+        <div class="call-to-action">
+            <p>Nessuno nasce eroe.<br>Eroi non si nasce: <strong><em>lo si diventa!</em></strong></p>
+        </div>
+        <br>
+        <div class="call-to-action">
+            <p class="call-to-action__first-line">Diventa un eroe anche tu:</h2>
+            <p class="call-to-action__last-line">salva il Pianeta insieme a noi!</h2>
+        </div>
+        <br>
+        <div class="form-contatto" style="text-align: center;">
+            <p>Scrivici, chiamaci o compila questo form per sapere come fare.</p>
+        </div>
+    </main>
+    <form action="#" class="info" method="post">
+        <fieldset class="form-fieldset">
+            <div class="info__item">
+                <label for="name"><span style="color: red;">*</span> Nome: </label>
+                <input type="text" name="name" required>
+            </div>
+            <div class="info__item">
+                <label for="surname"><span style="color: red;">*</span> Cognome: </label>
+                <input type="text" name="surname" required>
+            </div>
+            <div class="info__item">
+                <label for="phone-number">Telefono: </label>
+                <input type="text" name="phone-number" placeholder="+39 333 444 5566">
+            </div>
+            <div class="info__item">
+                <label for="email"><span style="color: red;">*</span> Email: </label>
+                <input type="email" name="email" required>
+            </div>
+            <div class="info__item whatami" required>
+                <span><span style="color: red;">*</span> Cosa sei?</span> <br>
+                <input type="radio" name="whatami" value="privato">Privato 
+                <input type="radio" name="whatami" value="azienda">Azienda 
+                <input type="radio" name="whatami" value="altro">Altro 
+            </div>
+            <div class="info__item">
+                <label for="howknown"><span style="color: red;">*</span> Come ci hai conosciuti? </label><br>
+                <select name="howknown" id="howknown" required>
+                    <option value="motore-ricerca">Motori di ricerca</option>
+                    <option value="passaparola">Passaparola di conoscenti</option>
+                    <option value="pubblicita-sede">Pubblicità in una sede</option>
+                    <option value="social">Post sui social network</option>
+                    <option value="pubblicita-yt">Pubblicità su YouTube</option>
+                    <option value="altro">Altro</option>
+                </select>
+            </div>
+            <div class="info__item">
+                <label for="information"><span style="color: red;">*</span>Chiedi e ti sarà risposto! </label>
+                <textarea name="information" id="informaton" required></textarea>
+            </div>
+
+            <div class="info__item other-check grid-container">
+                <input type="checkbox" id="privacy" name="privacy" class="other-check" required>
+                <p class="other-check__description"><span style="color: red;">*</span> Autorizzo il trattamento dei miei dati personali ai sensi del D. Lgs. 2018/101 e del GDPR (Regolamento UE 2016/679)</p>
+            </div>
+            <div class="info__item other-check grid-container">
+                <input type="checkbox" name="newsletter" id="newsletter">
+                <p class="other-check__description">Vorrei che usaste i miei contatti per inviarmi notizie e aggiornamenti su di voi e sulle vostre iniziative</p>
+            </div>
+            <br>
+            <button class="sub" type="submit">Invia</button>
+        </fieldset>
+    </form>
+    <footer class="footer">
+        <div class="footer-item copyright">
+            <p class="copy">&copy; Copyright 2024</p>
+        </div>
+        <div class="footer-item social-icons">
+            <a href="#!">
+                <i class="fab fa-facebook fa-2x"></i>
+            </a>
+            <a href="#!">
+                <i class="fab fa-instagram fa-2x"></i>
+            </a>
+            <a href="#!">
+                <i class="fab fa-tiktok fa-2x"></i>
+            </a>
+        </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/bbbfa147b2.js" crossorigin="anonymous"></script>
+</body>
+</html>
