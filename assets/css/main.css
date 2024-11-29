@@ -6,24 +6,26 @@
 
 @font-face {
     font-family: 'Roboto';
-    src: url('assests/fonts/roboto_light_macroman/Roboto-Light-webfont.woff') format(woff);
+    src: url('assets/fonts/roboto_light_macroman/Roboto-Light-webfont.woff') format(woff);
     font-style: normal;
     font-weight: 200;
 }
 
 @font-face {
     font-family: 'Roboto';
-    src: url('assests/fonts/roboto_lightitalic_macroman/Roboto-LightItalic-webfont.woff') format(woff);
+    src: url('assets/fonts/roboto_lightitalic_macroman/Roboto-LightItalic-webfont.woff') format(woff);
     font-style: italic;
     font-weight: 200;
 }
 
 @font-face {
     font-family: 'Roboto';
-    src: url('assests/fonts/roboto_boldcondensed_macroman/RobotoCondensed-Bold-webfont.woff') format(woff);
+    src: url('assets/fonts/roboto_boldcondensed_macroman/RobotoCondensed-Bold-webfont.woff') format(woff);
     font-style: normal;
     font-weight: 700;
 }
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 
 :root {
     --primary: #5cbd2f;
@@ -142,38 +144,95 @@ p {
     line-height: 2em;
 }
 
-.info {
+
+.form-fieldset {
+    border: 1px solid var(--primary);
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: center;
-    align-content: center;
-    margin-left: 15%;
-    margin-right: 15%;
+}
+
+input[type=text],
+input[type=email],
+input[type=radio],
+select,
+textarea,
+input[type=checkbox] {
+    border: 1px solid var(--secondary);
 }
 
 .info__item {
-    margin: 1em;
+    margin: auto 1em;
+    padding-top: 0.5em;
     line-height: 1.5em;
+    padding: 1em;
 }
 
-.other-check {
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    resize:vertical;
+}
+
+input[type=radio] {
+    width: 7%;
+}
+
+select {
+    width: 100%;
+    border: 1px solid var(--secondary);
+    padding: 0.25em 0.2em;
+    border-radius: 0.25em;
+}
+
+.info__item input[type=text],
+.info__item input[type=email] {
+    width: 75%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+.grid-container {
     display: inline-grid;
-    border: 1px solid var(--primary);
     grid-template-rows: auto;
     grid-template-columns: auto auto;
-    justify-items: start;
+    align-items: center;
+    padding-top: 1em;
+    padding-bottom: 1%;
+}
+
+.other-check:first-child {
+    margin-bottom: 1em;
 }
 
 .sub {
     width: 6em;
     height: 2em;
-    border: var(--primary);
-    background-color: var(--primary);
-    margin: 1em;
+    border: 1px solid var(--primary);
+    color: var(--secondary);
+    text-decoration: solid;
+    margin: 2em auto 1em auto;
     font-size: 0.9em;
 }
+
+.our-descript {
+    margin-bottom: 1.5em;
+}
+
+.our-descript:last-of-type {
+    padding-top: 0.5em;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.our-descript-last {
+    font-size: larger;
+}
+
 
 .project-container {
     display: grid;
@@ -183,12 +242,36 @@ p {
     align-content: center;
 }
 
+.separator {
+    display: inline-flex;
+    justify-content: center;
+    margin: 0em auto 2em auto;
+}
+
+.bi {
+    font-size: 1.5em;
+}
+
+.bi-tree-fill {
+    color: var(--primary);
+}
+
+.bi-heart {
+    color: palevioletred;
+}
+
+.bi-droplet-half {
+    color: var(--secondary);
+}
+
+
 .theproject {
     display: inline-grid;
     grid-template-rows: [first] 2em [second] auto [third] max-content [forth];
     grid-template-columns: [on-left] 1fr [on-right];
     align-content: center;
     justify-content: center;
+
 }
 #title {
     grid-row: first;
@@ -212,8 +295,9 @@ p {
     border: 1px solid var(--primary)
 }
 .theproject__descript {
-    margin-bottom: 2.5em;
+    margin-top: 1.5em;
 }
+
 
 .contacts__item {
     p {
@@ -277,19 +361,73 @@ a:visited:active {
         padding-left: 10px;
         margin-left: 50px;
     }
-    .contacts {
-        margin-left: 25%;
-        margin-right: 20%;
+
+    .the-title {
+        margin-top: 1em;
     }
+
     .contacting {
         margin-left: 25%;
         margin-right: 25%;
     }
+
+    .form-fieldset {
+        display: flex;
+        flex-direction: column;
+        max-width: fit-content;
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+
+    input[type=text],
+    input[type=email] {
+        display: block;
+        width: max-content;
+    }
+
+    select {
+        width: 70%;
+    }
+
+    input[type=radio] {
+        width: 5%;
+    }
+
+    textarea {
+        display: block;
+        width: 70%;
+    }
+
+    .theproject__descript {
+        margin: 3em 15%;
+    }
+
 }
 
 @media only screen and (max-width: 749px) {
+
+    .the-title {
+        margin-top: 0.7em;
+    }
     .info {
         margin-left: 5%;
         margin-right: 5%;
     }
+
+    .sub {
+        margin: 2em auto;
+    }
+
+    .info__item input[type=text],
+    .info__item input[type=email] {
+    width: 100%;
+    }
+
+    .separator {
+        display: inline-flex;
+        justify-content: center;
+        padding-top: 1em;
+        margin: 0.2em auto 2em auto;
+    }
+    
 }
