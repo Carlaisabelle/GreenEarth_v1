@@ -300,10 +300,10 @@ select {
 
 
 .contacts__item {
+    margin-bottom: 1em;
     p {
         line-height: 1.3em;
     }
-    margin-bottom: 1em;
 }
 
 .contacts :last-child {
